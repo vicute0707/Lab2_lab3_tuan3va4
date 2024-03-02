@@ -13,10 +13,12 @@ LAB 3: REDIS
  ![image](https://github.com/vicute0707/Lab2_lab3_tuan3va4/assets/122417490/117faed5-134d-49ad-b659-2f29d41a51b0)
       ------Package entity
 ![image](https://github.com/vicute0707/Lab2_lab3_tuan3va4/assets/122417490/230d9ec1-3af7-4cb9-aeb1-3387d3148c5f)
-      ------Packege Controller, set gía trị và save repostory
+      ------Packege Controller, set gía trị và save repostory, create dữ liệu 
 ![image](https://github.com/vicute0707/Lab2_lab3_tuan3va4/assets/122417490/45794394-7e21-40fa-913c-b59050e4097a)
 -----------------Khởi động project và Thấy dữ liệu đc lưu ở port 8080-------------------
 ![image](https://github.com/vicute0707/Lab2_lab3_tuan3va4/assets/122417490/ae85ff1c-7de0-4dae-9cee-fb1b20eba903)
+-------------- Vào cổng dữ liệu bằng localhost 8080 và API là----
+![image](https://github.com/vicute0707/Lab2_lab3_tuan3va4/assets/122417490/266086cd-aae7-4172-bea6-bd5ac3502e52)
 
 
 

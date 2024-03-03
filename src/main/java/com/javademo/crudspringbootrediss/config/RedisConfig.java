@@ -1,2 +1,28 @@
-package com.javademo.crudspringbootrediss.config;public class RedisConfig {
+package com.javademo.crudspringbootrediss.config;
+
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.repository.configuration.EnableRedisRepositories;
+import org.springframework.data.redis.serializer.GenericToStringSerializer;
+
+@Configurable
+@ComponentScan("com.javademo.crudspringbootrediss")
+@EnableRedisRepositories(basePackages = "com.javademo.crudspringbootrediss")
+@PropertySource("classpath:application.properties")
+public class RedisConfig {
+    @Bean
+    JedisConnectionFactory jedisConnectionFactory() {
+        return new JedisConnectionFactory();
+    }
+    @Bean
+    public RedisTemplate<String,Object> redisTemplate(){
+        final RedisTemplate<String,Object> template = new RedisTemplate<>();
+        template.setConnectionFactory(jedisConnectionFactory());
+        template.setValueSerializer(new GenericToStringSerializer<Object>(Object.class));
+        return template;
+    }
 }
